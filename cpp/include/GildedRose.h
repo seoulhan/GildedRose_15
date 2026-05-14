@@ -4,8 +4,19 @@
 
 class GildedRose {
 public:
-    std::vector<Item>& items;
+  std::vector<Item> &items;
 
-    GildedRose(std::vector<Item>& items);
-    void updateQuality();
+  GildedRose(std::vector<Item> &items);
+  void updateQuality();
+
+  void updateNormalItem(Item &item);
+
+  void updateBackstagePasses(Item &item);
+
+  void updateAgedBrie(Item &item);
+
+private:
+  void updateAgedBrie(Item &item);
+  void updateBackstagePasses(Item &item);
+  void updateNormalItem(Item &item);
 };
