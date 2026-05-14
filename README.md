@@ -50,3 +50,14 @@ ctest --test-dir build
 
 
 ### To-Do list
+- 회귀 테스트 작성
+- 코드 정리(상수/변수 추출)
+- 조건 분리 후 단순화
+- 로직 메서드 추출
+- 로직 클래스 분리
+- Abstract Class, Abstract Factory 추상화
+- 클래스 구조 및 변수 명칭 통일
+- F&B 아이템 추가
+ 일반 아이템보다 2배 빠르게 quality 감소
+ sellIn 지나면 4배 감소(일반의 2배)
+- 추가 리팩토링 (선언-초기화 분리, 중복 제거, inline화)

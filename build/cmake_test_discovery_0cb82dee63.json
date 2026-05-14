@@ -1,15 +1,60 @@
 {
-  "tests": 1,
+  "tests": 10,
   "name": "AllTests",
   "testsuites": [
     {
       "name": "GildedRoseTest",
-      "tests": 1,
+      "tests": 10,
       "testsuite": [
         {
-          "name": "Foo",
+          "name": "NormalItem_Quality_LowerBound",
           "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
           "line": 4
+        },
+        {
+          "name": "NormalItem_Expired",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 13
+        },
+        {
+          "name": "LegendaryItem_InvariantInSellin",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 22
+        },
+        {
+          "name": "LegendaryItem_InvariantAfterSellin",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 31
+        },
+        {
+          "name": "AgedBrie_AgedAfterSellin",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 40
+        },
+        {
+          "name": "AgedBrie_Quality_UpperBound",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 49
+        },
+        {
+          "name": "TAFKAL80ETC_Value_GT_D10",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 58
+        },
+        {
+          "name": "TAFKAL80ETC_Value_LT_D0",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 68
+        },
+        {
+          "name": "TAFKAL80ETC_Value_LT_D0_Overflow",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 78
+        },
+        {
+          "name": "Item_Empty",
+          "file": "C:\\DEV\\GildedRose_15\\cpp\\test\\GildedRoseTest.cpp",
+          "line": 88
         }
       ]
     }

@@ -1,13 +1,6 @@
 #include "GildedRose.h"
 #include <gtest/gtest.h>
 
-TEST(GildedRoseTest, Foo) {
-  std::vector<Item> items = {Item("foo", 0, 0)};
-  GildedRose app(items);
-  app.updateQuality();
-  EXPECT_EQ("fixme", app.items[0].name);
-}
-
 TEST(GildedRoseTest, NormalItem_Quality_LowerBound) {
   std::vector<Item> items = {Item("noname", 0, 0)};
   GildedRose app(items);
@@ -90,4 +83,12 @@ TEST(GildedRoseTest, TAFKAL80ETC_Value_LT_D0_Overflow) {
 
   EXPECT_EQ(-1, app.items[0].sellIn);
   EXPECT_EQ(0, app.items[0].quality);
+}
+
+TEST(GildedRoseTest, Item_Empty) {
+  std::vector<Item> items = {};
+  GildedRose app(items);
+  app.updateQuality();
+
+  EXPECT_EQ(0, app.items.size());
 }
