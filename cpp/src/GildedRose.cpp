@@ -5,7 +5,13 @@ const std::string BACKSTAGE_PASSES =
     "Backstage passes to a TAFKAL80ETC concert";
 const std::string SULFURAS = "Sulfuras, Hand of Ragnaros";
 
-class AgedBrieUpdater {
+class ItemUpdater {
+public:
+  virtual ~ItemUpdater() = default;
+  virtual void update(Item &item) = 0;
+};
+
+class AgedBrieUpdater : public ItemUpdater {
 public:
   void update(Item &item) {
     item.quality++;
@@ -16,7 +22,7 @@ public:
   }
 };
 
-class BackstagePassUpdater {
+class BackstagePassUpdater : public ItemUpdater {
 public:
   void update(Item &item) {
     item.quality++;
@@ -31,12 +37,12 @@ public:
   }
 };
 
-class SulfurasUpdater {
+class SulfurasUpdater : public ItemUpdater {
 public:
   void update(Item &item) { return; }
 };
 
-class NormalItemUpdater {
+class NormalItemUpdater : public ItemUpdater {
 public:
   void update(Item &item) {
     item.quality--;
