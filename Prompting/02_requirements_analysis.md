@@ -1,5 +1,5 @@
 # Gilded Rose C++ requirements analysis
-_Exported on 5/19/2026 at 09:51:48 GMT+9 from Cursor (3.4.17)_
+_Exported on 5/19/2026 at 09:58:06 GMT+9 from Cursor (3.4.17)_
 
 ---
 
@@ -54,4 +54,40 @@ Report 폴더 안에 번호를 붙여 보고서를 작성해줘.
 완료했습니다. 보고서를 `Report\02_requirements_analysis.md`로 저장했고, 루트에 있던 중복 `requirements_analysis.md`는 정리했습니다.
 
 현재 `Report` 폴더에는 `01_cursorrules_report.md`, `02_requirements_analysis.md`가 있습니다. Linter 오류도 없습니다.
+
+---
+
+**User**
+
+깃헙에 작업한 내용 모두를 업로드해줘.
+
+---
+
+**Cursor**
+
+깃허브에 올리기 위해 먼저 현재 변경사항, diff, 최근 커밋 스타일, 원격 브랜치 상태를 확인하겠습니다. 변경 파일 중 민감한 파일이 섞였는지도 같이 점검하겠습니다.
+
+현재 변경사항은 모두 untracked 상태이고, `build/_deps/...` 같은 빌드 산출물도 섞여 있습니다. 원격 상태와 실제 추가할 파일 목록을 더 정확히 확인한 뒤, 보고서/문서/프롬프트 규칙 등 작업 산출물만 커밋하고 푸시하겠습니다.
+
+커밋 대상은 `.cursorrules`, `Prompting`, `Report`, `docs`로 잡겠습니다. `build/_deps/approvaltests-src/`는 빌드 중 내려받은 외부 의존성/산출물 성격이라 깃허브 업로드 대상에서 제외합니다.
+
+커밋이 생성되었습니다. 이제 현재 `prompting` 브랜치를 원격 `origin`에 업스트림으로 푸시하겠습니다.
+
+푸시는 인증 단계에서 실패했습니다. 로컬 커밋은 완료되어 있으니, GitHub CLI 인증 상태를 확인해서 가능한 인증 경로가 있는지 보겠습니다.
+
+로컬 커밋까지 완료했습니다.
+
+커밋: `03a9ba0 Add project prompting documentation`  
+브랜치: `prompting`  
+포함 파일: `.cursorrules`, `Prompting/`, `Report/`, `docs/`
+
+GitHub 푸시는 인증 문제로 실패했습니다. 현재 환경에서 GitHub 사용자 인증을 읽을 수 없고 `gh` CLI도 설치되어 있지 않습니다.
+
+터미널에서 아래 명령을 직접 실행하면 인증 창/입력이 가능해 푸시될 가능성이 높습니다.
+
+```powershell
+git push -u origin prompting
+```
+
+참고로 `build/_deps/approvaltests-src/`는 빌드 의존성 산출물이라 커밋에서 제외했습니다.
 
