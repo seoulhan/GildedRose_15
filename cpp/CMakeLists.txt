@@ -12,6 +12,16 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
+# --- CMake - ApprovalTests 설치 ---
+# FetchContent로 헤더 전용 라이브러리 추가
+FetchContent_Declare(
+    ApprovalTests
+    GIT_REPOSITORY https://github.com/approvals/ApprovalTests.cpp.git
+    GIT_TAG v.10.13.0
+)
+FetchContent_MakeAvailable(approvaltests)
+
+
 # Library
 add_library(gilded_rose src/GildedRose.cpp)
 target_include_directories(gilded_rose PUBLIC include)
@@ -19,7 +29,8 @@ target_include_directories(gilded_rose PUBLIC include)
 # Tests
 enable_testing()
 add_executable(gilded_rose_test test/GildedRoseTest.cpp)
-target_link_libraries(gilded_rose_test gilded_rose GTest::gtest_main)
+target_link_libraries(gilded_rose_test PRIVATE gilded_rose GTest::gtest_main)
+target_link_libraries(gilded_rose_test PRIVATE ApprovalTests::ApprovalTests)
 
 include(GoogleTest)
 gtest_discover_tests(gilded_rose_test)

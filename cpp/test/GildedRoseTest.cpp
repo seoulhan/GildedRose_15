@@ -1,4 +1,5 @@
 #include "GildedRose.h"
+#include "ApprovalTests.hpp"
 #include <gtest/gtest.h>
 
 TEST(GildedRoseTest, NormalItem_Quality_LowerBound) {

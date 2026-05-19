@@ -1,12 +1,12 @@
 GildedRoseTest.Foo 0 0
-GildedRoseTest.AgedBrie_AgedAfterSellin 7 0.023474
-GildedRoseTest.AgedBrie_Quality_UpperBound 7 0.0222514
-GildedRoseTest.Item_Empty 7 0.0255128
-GildedRoseTest.LegendaryItem_InvariantAfterSellin 7 0.0237595
-GildedRoseTest.LegendaryItem_InvariantInSellin 7 0.0237895
-GildedRoseTest.NormalItem_Expired 7 0.0240484
-GildedRoseTest.NormalItem_Quality_LowerBound 7 0.0235585
-GildedRoseTest.TAFKAL80ETC_Value_GT_D10 7 0.021715
-GildedRoseTest.TAFKAL80ETC_Value_LT_D0 7 0.0230998
-GildedRoseTest.TAFKAL80ETC_Value_LT_D0_Overflow 7 0.0229649
+GildedRoseTest.AgedBrie_AgedAfterSellin 10 0.0211107
+GildedRoseTest.AgedBrie_Quality_UpperBound 10 0.0195198
+GildedRoseTest.Item_Empty 10 0.0220169
+GildedRoseTest.LegendaryItem_InvariantAfterSellin 10 0.0205566
+GildedRoseTest.LegendaryItem_InvariantInSellin 10 0.0205231
+GildedRoseTest.NormalItem_Expired 10 0.020961
+GildedRoseTest.NormalItem_Quality_LowerBound 10 0.0208285
+GildedRoseTest.TAFKAL80ETC_Value_GT_D10 10 0.0192218
+GildedRoseTest.TAFKAL80ETC_Value_LT_D0 10 0.0204215
+GildedRoseTest.TAFKAL80ETC_Value_LT_D0_Overflow 10 0.0203442
 ---
