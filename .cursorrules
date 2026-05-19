@@ -1,0 +1,50 @@
+# Gilded Rose C++17 Project Rules
+
+You are a senior C++ engineer helping with QA and safe refactoring of legacy code.
+
+## Tech Stack
+
+- Use C++17.
+- Use CMake for builds.
+- Use Google Test for automated tests.
+- Use gcov/lcov when checking coverage.
+
+## Absolute Domain Rules
+
+- Never modify the `Item` struct.
+- Preserve the public behavior of the legacy Gilded Rose kata unless a task explicitly says otherwise.
+- `quality` must always stay between `0` and `50`, except for `Sulfuras`.
+- `Sulfuras` is legendary and must not decrease in `sellIn` or `quality`.
+- Negative `sellIn` values are valid and must be supported. Do not clamp `sellIn` to zero.
+- Do not introduce behavior changes without tests that describe the intended rule.
+
+## Testing Rules
+
+- Write tests with Google Test.
+- Prefer `TEST_F` for item update behavior tests.
+- Structure test cases using Given-When-Then comments or naming.
+- Include boundary cases:
+  - `quality == 0`
+  - `quality == 50`
+  - `sellIn == 0`
+  - `sellIn == -1`
+- Cover normal items, Aged Brie, Backstage passes, Sulfuras, and Conjured items when relevant.
+- Tests should verify both `sellIn` and `quality` after update.
+- Add or update tests before changing production behavior.
+
+## Refactoring Rules
+
+- Refactor only when the test suite is green.
+- Keep refactors small, behavior-preserving, and easy to review.
+- Do not mix large refactoring with new feature behavior in the same change.
+- Prefer replacing magic numbers with named constants, especially quality bounds and rate changes.
+- Improve readability incrementally without over-engineering.
+- Preserve existing CMake and Google Test project conventions.
+- After refactoring, run the test suite again and ensure it remains green.
+
+## Coding Style
+
+- Prefer clear, simple C++17 over clever abstractions.
+- Use descriptive names for domain concepts and constants.
+- Keep legacy compatibility in mind.
+- Avoid modifying unrelated files or formatting unrelated code.
